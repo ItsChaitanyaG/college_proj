@@ -1,0 +1,292 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: #E8F0FF;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700; /* optional */
+}
+
+body, p, li, span, a {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+
+/*INDEX*/
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.navbar{
+    background-color: aliceblue !important;
+}
+
+.banner{
+    background: url(./assets/banner.png);
+    height: 400px;
+    position: relative;
+}
+.banner-text{
+    color: aliceblue;
+    z-index: 2;
+}
+
+/*INDEX_COURSE*/
+
+.course{
+    color: #E8F0FF !important;
+    font-weight: bold;
+}
+
+.news-cont-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position:relative;
+    overflow: visible;
+}
+
+.news-cont-grid{
+    padding: 40px;
+    background-color: #F5F7FA;
+    background-position: -40px -20px;
+}
+
+.news-list{
+    display: flex;
+    justify-content: center;
+}
+
+/*NEWS_INDEX*/
+
+.news {
+    background: #E8F0FF;
+}
+
+.news-cont-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.news-img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.news-content p {
+    color: #444;
+}
+
+.news-more {
+    text-decoration: underline;
+    color: #1e3a8a;
+    font-weight: 600;
+}
+
+.news-list {
+    margin-top: 15px;
+}
+
+.news-list a {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.news-list a:hover {
+    color: #0d1b55;
+    margin-left: 5px;
+}
+
+.news-cont-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+/* Image control */
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Text link */
+.news-more {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*footer*/
+
+.footer{
+    background: url(./assets/footer.avif);
+    color: white !important;
+}
+
+
+/*ABOUT*/
+
+.aboutIntro{
+    margin-top: 100px;
+}
+
+.aboutIntro>h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutIntro>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.vision-mission{
+    padding: 20px;
+}
+
+.vision-mission>div{
+    width: fit-content;
+}
+
+/*ABOUT_ACHIVEMENTS*/
+
+.ach-list {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: center;
+}
+
+
+/*vision and mission*/
+
+.vm-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: none;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.vm-header {
+    background: #B3C7EB;   
+    color: #000;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 12px 20px;
+}
+
+.vm-body {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.vm-body blockquote p {
+    font-style: italic;
+    color: #333;
+}
+
+.vm-body ul li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/*EVENTS_NEWS*/
+
+.news-item {
+    display: flex;
+    align-items: center;       
+    gap: 20px;                 
+}
+
+.news-number {
+    font-size: 4rem;
+    color: #0d6efd;            
+    margin: 0;
+    min-width: 80px;           
+    text-align: right;
+}
+
+/*Gallery*/
+
+.custom-carousel img{
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/*CONTACT*/
+
+.contactCardB{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.contactImg{
+    width:fit-content;
+}
+
+.contactImg img{
+    
+    object-fit: fill;
+}
+
+.msgCont{
+    max-width: 1590px;
+    width: 100%;
+    border-radius: 12px;
+    margin: 0 20px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+    .news-cont-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .news-img {
+        height: 220px;
+    }
+}
+
+/*Animations*/
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
